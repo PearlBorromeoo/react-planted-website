@@ -1,0 +1,38 @@
+.rightbarFriendList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.rightbarFriend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rightbarDPContainer {
+    margin-right: 10px;
+    position: relative;
+}
+
+.rightbarDP {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rightbarOnline {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(109, 226, 109);
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    border: 2px solid white;
+}
+
+.rightbarUser {
+    font-weight: 500;
+}
