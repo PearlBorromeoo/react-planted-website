@@ -28,7 +28,7 @@ export default function Topbar() {
         <div className="topbarIcons">
           <div className="topbarIconItem">
             <Person />
-            <span className="topbarIconBadge">1</span>
+            <span className="topbarIconBadge">2</span>
           </div>
           <div className="topbarIconItem">
             <Chat />
