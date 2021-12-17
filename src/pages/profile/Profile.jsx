@@ -25,7 +25,7 @@ export default function Profile() {
     <>
       <Topbar/>
       <div className="profile">
-        <Leftbar/>
+        {/* <Leftbar/> */}
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">

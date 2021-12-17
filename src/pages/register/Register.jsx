@@ -2,6 +2,7 @@ import "./register.css";
 import { useRef } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   const email = useRef();
@@ -75,7 +76,9 @@ export default function Register() {
               Sign Up
             </button>
             <span className="registerLogin">Already have an account?</span>
+            <Link to="/login" style={{textDecoration:"none"}}>
             <button className="registerLoginButton">Log In</button>
+            </Link>
           </form>
         </div>
       </div>

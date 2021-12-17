@@ -103,11 +103,11 @@ export default function Messenger() {
         </div>
         <div className="chatOnline">
           <div className="chatOnlineWrapper">
+            {/* <ChatOnline />
             <ChatOnline />
             <ChatOnline />
             <ChatOnline />
-            <ChatOnline />
-            <ChatOnline />
+            <ChatOnline /> */}
           </div>
         </div>
       </div>

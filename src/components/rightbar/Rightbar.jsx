@@ -48,12 +48,11 @@ export default function Rightbar({ user }) {
   const HomeRightbar = () => {
     return (
       <>
-        {console.log("home:iamrunning")}
         <div className="birthdayContainer">
           <img className="birthdayImage" src="/assets/gift.png" alt="" />
           <span className="birthdayText">
-            <b>Haku Yamamoto</b> and <b>3 other friends</b> have a birthday
-            today
+            <b>Haku Yamamoto</b> and <b>3 other friends</b> have birthdays
+            today.
           </span>
         </div>
         <img className="rightbarAD" src="/assets/advertisment.jpeg" alt="" />
@@ -70,7 +69,6 @@ export default function Rightbar({ user }) {
   const ProfileRightbar = () => {
     return (
       <>
-        {console.log("profile:iamrunning")}
         {user.username !== currentUser.username && (
           <button className="rightbarFollowButton" onClick={handleClick}>
             {followed ? "Unfollow" : "Follow"}
@@ -84,20 +82,8 @@ export default function Rightbar({ user }) {
             <span className="rightbarInfoValue">{user.name}</span>
           </div>
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">City: </span>
-            <span className="rightbarInfoValue">Tokyo</span>
-          </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">City: </span>
-            <span className="rightbarInfoValue">Tokyo</span>
-          </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">City: </span>
-            <span className="rightbarInfoValue">Tokyo</span>
-          </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">City: </span>
-            <span className="rightbarInfoValue">Tokyo</span>
+            <span className="rightbarInfoKey">Email: </span>
+            <span className="rightbarInfoValue">{user.email}</span>
           </div>
         </div>
         <h4 className="rightbarTitle">Followings</h4>

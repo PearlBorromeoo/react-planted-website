@@ -22,25 +22,23 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
-          <span className="topbarLink">Timeline</span>
+          <Link to={`/marketplace`} style={{textDecoration:"none"}}>
+          <span className="topbarLink">Marketplace</span>
+          </Link>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
-            <Person />
-            <span className="topbarIconBadge">2</span>
-          </div>
-          <div className="topbarIconItem">
+            <Link to="/messenger" style={{color:"wheat"}}>
             <Chat />
-            <span className="topbarIconBadge">1</span>
-          </div>
-          <div className="topbarIconItem">
-            <Notifications />
-            <span className="topbarIconBadge">1</span>
+            </Link>
+            {/* <span className="topbarIconBadge">1</span> */}
           </div>
         </div>
-        <Link to={`/profile/${user.username}`}>
-          <img src={user.profilePicture ? user.profilePicture : PF+"profile-pictures/noDP.png"} alt="" className="topbarDP" />
+        <Link to={`/profile/${user.username}`} style={{textDecoration:"none"}}>
+          <img src={user.profilePicture ? user.profilePicture : PF+"profile-pictures/noDP.png"} alt="" className="topbarDP" />          
+        </Link>
+        <Link to={`/profile/${user.username}`} style={{textDecoration:"none"}}>
+        <span className="topbarUsername">{user.username}</span>
         </Link>
       </div>
     </div>

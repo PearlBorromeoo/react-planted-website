@@ -1,4 +1,4 @@
-import "./post.css"
+import "./mpost.css"
 import {MoreVert} from "@material-ui/icons"
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
@@ -6,7 +6,7 @@ import {format} from "timeago.js";
 import {Link} from "react-router-dom"
 import { AuthContext } from "../../context/AuthContext";
 
-export default function Post({post}) {
+export default function Mpost({post}) {
   const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
@@ -27,7 +27,7 @@ export default function Post({post}) {
 
   const likeHandler =()=>{
     try {
-      axios.put("/posts/"+post._id+"/like", {userID:currentUser._id})
+      axios.put("/marketplace/"+post._id+"/like", {userID:currentUser._id})
     } catch (err) {}
     setLike(isLiked?like-1:like+1)
     setIsLiked(!isLiked)
@@ -58,7 +58,7 @@ export default function Post({post}) {
             <span className="likeCount">{like} likes</span>
           </div>
           <div className="postBottomRight">
-            {/* <span className="commentCount">{post.comment} comment</span> */}
+            <span className="commentCount">{post.comment} comment</span>
           </div>
         </div>
       </div>
